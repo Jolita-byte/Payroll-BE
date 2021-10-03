@@ -3,8 +3,8 @@ package lt.Payroll.controller;
 import lt.Payroll.model.EmployeeScheduleEntry;
 import lt.Payroll.model.Schedule;
 import lt.Payroll.model.SchedulePatternLine;
-import lt.Payroll.model.requestbody.FillScheduleRequest;
-import lt.Payroll.service.ScheduleService;
+import lt.Payroll.model.requestbody.ScheduleRequest;
+import lt.Payroll.service.Tier1.ScheduleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,8 +27,8 @@ public class ScheduleController {
     }
 
     @PostMapping(value = "/fill")
-    public List<EmployeeScheduleEntry> fillSchedule(@RequestBody FillScheduleRequest fillScheduleRequest){
-        return scheduleService.fillSchedule(fillScheduleRequest);
+    public List<EmployeeScheduleEntry> fillSchedule(@RequestBody ScheduleRequest scheduleRequest){
+        return scheduleService.fillSchedule(scheduleRequest);
     }
 
 

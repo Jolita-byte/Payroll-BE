@@ -1,9 +1,12 @@
 package lt.Payroll.controller;
 
 import lt.Payroll.model.EmployeeScheduleEntry;
-import lt.Payroll.service.EmployeeScheduleEntryService;
+import lt.Payroll.model.requestbody.ScheduleRequest;
+import lt.Payroll.model.responsebody.EmployeeScheduledWorkDuration;
+import lt.Payroll.service.Tier1.EmployeeScheduleEntryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

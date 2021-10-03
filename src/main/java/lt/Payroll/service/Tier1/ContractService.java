@@ -1,4 +1,4 @@
-package lt.Payroll.service;
+package lt.Payroll.service.Tier1;
 
 import lt.Payroll.model.Contract;
 import lt.Payroll.model.dto.ContractDTO;
@@ -10,20 +10,21 @@ import lt.Payroll.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
 @Service
 public class ContractService {
-    @Autowired
     private EmployeeRepository employeeRepository;
-
-    @Autowired
     private ContractRepository contractRepository;
-
-    @Autowired
     private ContractLineRepository contractLineRepository;
 
+    public ContractService(EmployeeRepository employeeRepository, ContractRepository contractRepository, ContractLineRepository contractLineRepository) {
+        this.employeeRepository = employeeRepository;
+        this.contractRepository = contractRepository;
+        this.contractLineRepository = contractLineRepository;
+    }
 
     public List<Contract> getAllContracts() {
         return contractRepository.findAll();
@@ -52,5 +53,9 @@ public class ContractService {
 
     public List<ContractLine> getContractLinesByContractId(Long id) {
         return contractLineRepository.findAllByContractId(id);
+    }
+
+    public List<Contract> getAllValidContractsPerPeriod(LocalDate fromDate, LocalDate toDate){
+        return contractRepository.findAllValidPerPeriod(fromDate, toDate);
     }
 }

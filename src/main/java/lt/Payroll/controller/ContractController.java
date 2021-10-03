@@ -3,7 +3,7 @@ package lt.Payroll.controller;
 import lt.Payroll.model.Contract;
 import lt.Payroll.model.dto.ContractDTO;
 import lt.Payroll.model.ContractLine;
-import lt.Payroll.service.ContractService;
+import lt.Payroll.service.Tier1.ContractService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

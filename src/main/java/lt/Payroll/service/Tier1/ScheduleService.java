@@ -1,7 +1,7 @@
-package lt.Payroll.service;
+package lt.Payroll.service.Tier1;
 
 import lt.Payroll.model.*;
-import lt.Payroll.model.requestbody.FillScheduleRequest;
+import lt.Payroll.model.requestbody.ScheduleRequest;
 import lt.Payroll.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,12 +34,12 @@ public class ScheduleService {
         return schedulePatternLineRepository.findAll();
     }
 
-    public List<EmployeeScheduleEntry> fillSchedule(FillScheduleRequest fillScheduleRequest) {
+    public List<EmployeeScheduleEntry> fillSchedule(ScheduleRequest scheduleRequest) {
         List<EmployeeScheduleEntry> employeeScheduleEntries = new ArrayList<>();
-        List<Long> contractIdList = fillScheduleRequest.getContract_id_list();
+        List<Long> contractIdList = scheduleRequest.getContract_id_list();
         for (Long contractId : contractIdList) {
             employeeScheduleEntries.addAll(generateEmployeeScheduleEntriesByContractFromToDate(contractId,
-                    fillScheduleRequest.getFrom(), fillScheduleRequest.getTo()));
+                    scheduleRequest.getFrom(), scheduleRequest.getTo()));
         }
         return employeeScheduleEntries;
     }

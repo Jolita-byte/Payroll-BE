@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Data
-public class FillScheduleRequest {
+public class ScheduleRequest {
     private LocalDate from;
     private LocalDate to;
     private List<Long> contract_id_list;

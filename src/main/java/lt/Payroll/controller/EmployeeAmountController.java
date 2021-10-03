@@ -1,7 +1,7 @@
 package lt.Payroll.controller;
 
 import lt.Payroll.model.EmployeeAmount;
-import lt.Payroll.service.EmployeeAmountService;
+import lt.Payroll.service.Tier1.EmployeeAmountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

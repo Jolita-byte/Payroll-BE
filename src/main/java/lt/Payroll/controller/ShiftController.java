@@ -2,7 +2,7 @@ package lt.Payroll.controller;
 
 import lt.Payroll.model.Shift;
 import lt.Payroll.model.ShiftLine;
-import lt.Payroll.service.ShiftService;
+import lt.Payroll.service.Tier1.ShiftService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

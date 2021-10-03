@@ -1,12 +1,10 @@
 package lt.Payroll.controller;
 
-import lt.Payroll.configuration.ControllerPaths;
 import lt.Payroll.model.Employee;
 import lt.Payroll.model.dto.EmployeeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-import lt.Payroll.service.EmployeeService;
+import lt.Payroll.service.Tier1.EmployeeService;
 
 import java.util.List;
 

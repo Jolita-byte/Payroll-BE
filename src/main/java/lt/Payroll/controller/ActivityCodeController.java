@@ -1,7 +1,7 @@
 package lt.Payroll.controller;
 
 import lt.Payroll.model.ActivityCode;
-import lt.Payroll.service.ActivityCodeService;
+import lt.Payroll.service.Tier1.ActivityCodeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

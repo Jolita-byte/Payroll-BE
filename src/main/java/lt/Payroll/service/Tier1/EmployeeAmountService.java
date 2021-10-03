@@ -1,4 +1,4 @@
-package lt.Payroll.service;
+package lt.Payroll.service.Tier1;
 
 import lt.Payroll.model.EmployeeAmount;
 import lt.Payroll.repository.EmployeeAmountRepository;

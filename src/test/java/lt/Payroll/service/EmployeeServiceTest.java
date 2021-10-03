@@ -2,17 +2,14 @@ package lt.Payroll.service;
 
 import lt.Payroll.model.Employee;
 import lt.Payroll.repository.EmployeeRepository;
-import org.junit.Before;
+import lt.Payroll.service.Tier1.EmployeeService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.jdbc.Sql;
 
 import java.util.ArrayList;
 import java.util.Arrays;
